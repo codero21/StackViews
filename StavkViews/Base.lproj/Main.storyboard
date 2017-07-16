@@ -1,26 +1,100 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StavkViews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="ISW-JF-a5u"/>
+                        <viewControllerLayoutGuide type="bottom" id="8uj-OW-Hea"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="view" contentMode="scaleToFill" id="xQd-d3-ZEL">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1kz-bv-0xf">
+                                <rect key="frame" x="0.0" y="28" width="667" height="347"/>
+                                <subviews>
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xFG-ha-1bg" userLabel="Logo Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="347"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sts_logo_original" translatesAutoresizingMaskIntoConstraints="NO" id="iw3-cQ-DaX">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="347"/>
+                                                <color key="backgroundColor" red="0.99942404029999998" green="0.91960832579999996" blue="0.14047787640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xFG-ha-1bg" secondAttribute="height" multiplier="44:216" id="TBq-qN-P6Y"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-dW-gG8" userLabel="Right Stack View">
+                                        <rect key="frame" x="75" y="0.0" width="592" height="347"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6z2-jH-jou" userLabel="Login / Sign Up Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="592" height="172.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sG9-hf-rXt" userLabel="Login">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="172.5"/>
+                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.91960832579999996" blue="0.14047787640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" backgroundImage="cat"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBK-gC-cbP" userLabel="Sign Up">
+                                                        <rect key="frame" x="298" y="0.0" width="294" height="172.5"/>
+                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.91960832579999996" blue="0.14047787640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" backgroundImage="director"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uFF-wa-nTq" userLabel="Register Stack View">
+                                                <rect key="frame" x="0.0" y="174.5" width="592" height="172.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivM-Rw-Pwh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="592" height="172.5"/>
+                                                        <color key="backgroundColor" red="0.99942404029999998" green="0.91960832579999996" blue="0.14047787640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" backgroundImage="cello_player"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xFG-ha-1bg" secondAttribute="bottom" id="Syv-Ca-uex"/>
+                                    <constraint firstItem="tqT-dW-gG8" firstAttribute="top" secondItem="1kz-bv-0xf" secondAttribute="top" id="c6U-4I-8tn"/>
+                                    <constraint firstAttribute="trailing" secondItem="tqT-dW-gG8" secondAttribute="trailing" id="kaO-X7-PCe"/>
+                                    <constraint firstAttribute="bottom" secondItem="tqT-dW-gG8" secondAttribute="bottom" id="zD6-kY-Gsc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27397573932173291" green="0.27397573932173291" blue="0.27397573932173291" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1kz-bv-0xf" firstAttribute="leading" secondItem="xQd-d3-ZEL" secondAttribute="leading" id="GmI-yn-PDD"/>
+                            <constraint firstAttribute="bottom" secondItem="1kz-bv-0xf" secondAttribute="bottom" id="IYF-mF-qOe"/>
+                            <constraint firstAttribute="trailing" secondItem="1kz-bv-0xf" secondAttribute="trailing" id="UXB-JL-oVO"/>
+                            <constraint firstItem="1kz-bv-0xf" firstAttribute="top" secondItem="ISW-JF-a5u" secondAttribute="bottom" constant="8" symbolic="YES" id="vHb-L6-JXN"/>
+                            <constraint firstItem="1kz-bv-0xf" firstAttribute="centerX" secondItem="xQd-d3-ZEL" secondAttribute="centerX" id="yR9-TU-9jU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat" width="90" height="60"/>
+        <image name="cello_player" width="90" height="60"/>
+        <image name="director" width="90" height="60"/>
+        <image name="sts_logo_original" width="99" height="191"/>
+    </resources>
 </document>
